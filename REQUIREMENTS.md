@@ -118,3 +118,23 @@ As a purchasing manager
 I want to have a historical record of where a particular inventory item was throughout its lifetime
 So that I can potentially do statistical analysis
 ```
+
+```ghkerin
+User Story #9
+
+As a warehouse worker
+I want to give a pallet to a robot 
+So that I can avoid doing it myself
+
+    Scenario 9.1:
+
+    Jake (warehouse worker) is informed from his app that there are 100 widgets of type "A".
+    Type A widgets are transferrable by the drones.
+
+    When Jake takes the pallet out of the truck, he points his device at the drone and informs
+    the drone where to put the pallet. He uses the app to find a open spot that is not reserved
+    for anything (location 100) and chooses that location.
+
+    When the drone moves away he recieves a notice 5 minutes later that the drone has placed 
+    the pallet at location 100.
+```

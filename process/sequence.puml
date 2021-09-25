@@ -1,0 +1,18 @@
+actor Buyer
+actor SalesAgent
+actor WarehouseWorker
+
+participant InventoryApp
+participant InventoryDb
+participant OrderApp
+
+== Request Parts ==
+Buyer -> SalesAgent : Calls over phone
+
+== Search For Inventory ==
+SalesAgent -> InventoryApp : Query For Inventory
+InventoryApp -> InventoryDb : Find Inventory
+InventoryDb -> InventoryApp : Return Search Results
+InventoryApp -> SalesAgent : Show Search Results
+
+== Make Order ==

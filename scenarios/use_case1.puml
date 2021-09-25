@@ -4,6 +4,8 @@
 :Warehouse Worker: as WW
 :Purchasing Agent: as PA
 :Accountant: as AC
+:Drone: as DR
+:Location: as LO
 
 BU -> (Makes Order)
 (Makes Order) -> SA
@@ -13,3 +15,9 @@ SA --> (Make Order)
 WW --> (Get Inventory)
 SA --> (Request Inventory)
 (Request Inventory) --> PA
+
+WW --> (Assign Pallet)
+(Assign Pallet) --> DR
+DR --> (Move Pallet)
+(Move Pallet) --> Location
+Location --> (Send Notification)
