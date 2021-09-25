@@ -1,0 +1,15 @@
+:Buyer: as BU
+:Sales Agent: as SA
+:Purchasing Manager: as PM
+:Warehouse Worker: as WW
+:Purchasing Agent: as PA
+:Accountant: as AC
+
+BU -> (Makes Order)
+(Makes Order) -> SA
+SA --> (Query for Inventory)
+SA --> (Make Order)
+(Make Order) --> WW
+WW --> (Get Inventory)
+SA --> (Request Inventory)
+(Request Inventory) --> PA
